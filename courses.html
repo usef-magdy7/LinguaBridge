@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Courses | LinguaBridge Academy</title>
+<meta name="description" content="Browse LinguaBridge Academy's English courses: Beginner, Intermediate, Advanced, Business English, IELTS, TOEFL, Conversation, and Kids English.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+<div class="loader" aria-hidden="true">
+  <div class="loader-mark">LB</div>
+  <div class="loader-bar"><span></span></div>
+  <p>Loading LinguaBridge Academy…</p>
+</div>
+<div id="scroll-progress"></div>
+
+<header class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand"><span class="brand-mark">LB</span> LinguaBridge</a>
+    <nav class="nav-menu" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="courses.html" aria-current="page">Courses</a>
+      <a href="teachers.html">Teachers</a>
+      <a href="success.html">Success Stories</a>
+      <a href="future-languages.html">Future Languages</a>
+      <a href="expansion.html">Expansion</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn dark-toggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
+      <a href="contact.html" class="btn btn-primary btn-sm">Enroll Now</a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> <span>Courses</span></div>
+      <h1>Find Your <span class="bridge-underline">Perfect Course</span></h1>
+      <p>Eight structured programs covering every level and goal — from your very first words to exam-ready fluency.</p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="courses-heading">
+    <div class="container">
+      <h2 class="visually-hidden" id="courses-heading" style="position:absolute;left:-9999px;">All Courses</h2>
+
+      <!-- Search & Filter Toolbar -->
+      <div class="course-toolbar reveal">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="search" id="course-search" placeholder="Search courses (e.g. IELTS, Kids)..." aria-label="Search courses">
+        </div>
+        <div class="filter-chips">
+          <button class="filter-chip active" data-filter="all">All</button>
+          <button class="filter-chip" data-filter="general">General English</button>
+          <button class="filter-chip" data-filter="exam">Exam Prep</button>
+          <button class="filter-chip" data-filter="business">Business</button>
+          <button class="filter-chip" data-filter="kids">Kids</button>
+          <button class="filter-chip" data-filter="conversation">Conversation</button>
+        </div>
+      </div>
+
+      <!-- Course Grid: 8 cards -->
+      <div class="course-grid">
+
+        <div class="course-card reveal" data-title="Beginner English" data-category="general">
+          <div class="course-thumb">
+            <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&w=600&q=80" alt="Beginner English classroom">
+            <span class="course-level">Beginner</span>
+            <span class="course-price">$99</span>
+          </div>
+          <div class="course-body">
+            <h3>Beginner English</h3>
+            <div class="course-meta"><span><i class="fa-regular fa-clock"></i> 8 Weeks</span><span><i class="fa-solid fa-signal"></i> A1–A2</span></div>
+            <div class="course-instructor"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt=""><span>Sarah Mitchell</span></div>
+            <a href="contact.html" class="btn btn-primary btn-block btn-sm">Enroll Now</a>
+          </div>
+        </div>
+
+        <div class="course-card reveal reveal-delay-1" data-title="Intermediate English" data-category="general">
+          <div class="course-thumb">
+            <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=600&q=80" alt="Intermediate English classroom">
+            <span class="course-level">Intermediate</span>
+            <span class="course-price">$129</span>
+          </div>
+          <div class="course-body">
+            <h3>Intermediate English</h3>
+            <div class="course-meta"><span><i class="fa-regular fa-clock"></i> 8 Weeks</span><span><i class="fa-solid fa-signal"></i> B1–B2</span></div>
+            <div class="course-instructor"><img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&q=80" alt=""><span>Omar Farouk</span></div>
+            <a href="contact.html" class="btn btn-primary btn-block btn-sm">Enroll Now</a>
+          </div>
+        </div>
+
+        <div class="course-card reveal reveal-delay-2" data-title="Advanced English" data-category="general">
+          <div class="course-thumb">
+            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80" alt="Advanced English seminar">
+            <span class="course-level">Advanced</span>
+            <span class="course-price">$159</span>
+          </div>
+          <div class="course-body">
+            <h3>Advanced English</h3>
+            <div class="course-meta"><span><i class="fa-regular fa-clock"></i> 10 Weeks</span><span><i class="fa-solid fa-signal"></i> C1–C2</span></div>
+            <div class="course-instructor"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&q=80" alt=""><span>David Chen</span></div>
+            <a href="contact.html" class="btn btn-primary btn-block btn-sm">Enroll Now</a>
+          </div>
+        </div>
+
+        <div class="course-card reveal reveal-delay-3" data-title="Business English" data-category="business">
+          <div class="course-thumb">
+            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=600&q=80" alt="Business English workshop">
+            <span class="course-level">Professional</span>
+            <span class="course-price">$249</span>
+          </div>
+          <div class="course-body">
+            <h3>Business English</h3>
+            <div class="course-meta"><span><i class="fa-regular fa-clock"></i> 10 Weeks</span><span><i class="fa-solid fa-signal"></i> B2–C1</span></div>
+            <div class="course-instructor"><img src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?auto=format&fit=crop&w=100&q=80" alt=""><span>Laila Hassan</span></div>
+            <a href="contact.html" class="btn btn-primary btn-block btn-sm">Enroll Now</a>
+          </div>
+        </div>
+
+        <div class="course-card reveal" data-title="IELTS Preparation" data-category="exam">
+          <div class="course-thumb">
+            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=600&q=80" alt="IELTS preparation session">
+            <span class="course-level">Exam Prep</span>
+            <span class="course-price">$199</span>
+          </div>
+          <div class="course-body">
+            <h3>IELTS Preparation</h3>
+            <div class="course-meta"><span><i class="fa-regular fa-clock"></i> 6 Weeks</span><span><i class="fa-solid fa-signal"></i> B2–C1</span></div>
+            <div class="course-instructor"><img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=100&q=80" alt=""><span>Amara Okafor</span></div>
+            <a href="contact.html" class="btn btn-primary btn-block btn-sm">Enroll Now</a>
+          </div>
+        </div>
+
+        <div class="course-card reveal reveal-delay-1" data-title="TOEFL Preparation" data-category="exam">
+          <div class="course-thumb">
+            <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=600&q=80" alt="TOEFL preparation class">
+            <span class="course-level">Exam Prep</span>
+            <span class="course-price">$199</span>
+          </div>
+          <div class="course-body">
+            <h3>TOEFL Preparation</h3>
+            <div class="course-meta"><span><i class="fa-regular fa-clock"></i> 6 Weeks</span><span><i class="fa-solid fa-signal"></i> B2–C1</span></div>
+            <div class="course-instructor"><img src="https://images.unsplash.com/photo-1531123414780-f74242c2b052?auto=format&fit=crop&w=100&q=80" alt=""><span>Michael Reyes</span></div>
+            <a href="contact.html" class="btn btn-primary btn-block btn-sm">Enroll Now</a>
+          </div>
+        </div>
+
+        <div class="course-card reveal reveal-delay-2" data-title="English Conversation" data-category="conversation">
+          <div class="course-thumb">
+            <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=600&q=80" alt="English conversation club">
+            <span class="course-level">All Levels</span>
+            <span class="course-price">$79</span>
+          </div>
+          <div class="course-body">
+            <h3>English Conversation</h3>
+            <div class="course-meta"><span><i class="fa-regular fa-clock"></i> 4 Weeks</span><span><i class="fa-solid fa-signal"></i> A2–C1</span></div>
+            <div class="course-instructor"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt=""><span>James Okoro</span></div>
+            <a href="contact.html" class="btn btn-primary btn-block btn-sm">Enroll Now</a>
+          </div>
+        </div>
+
+        <div class="course-card reveal reveal-delay-3" data-title="Kids English" data-category="kids">
+          <div class="course-thumb">
+            <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=600&q=80" alt="Kids English class">
+            <span class="course-level">Ages 6–12</span>
+            <span class="course-price">$89</span>
+          </div>
+          <div class="course-body">
+            <h3>Kids English</h3>
+            <div class="course-meta"><span><i class="fa-regular fa-clock"></i> 12 Weeks</span><span><i class="fa-solid fa-signal"></i> Starter</span></div>
+            <div class="course-instructor"><img src="https://images.unsplash.com/photo-1607346256330-dee7af15f7c5?auto=format&fit=crop&w=100&q=80" alt=""><span>Nadia El-Sherif</span></div>
+            <a href="contact.html" class="btn btn-primary btn-block btn-sm">Enroll Now</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand" style="color:#fff;"><span class="brand-mark">LB</span> LinguaBridge</a>
+        <p>A modern language academy teaching English today, and building toward a multilingual, multi-country future — starting with our first international branch in Guinea-Bissau.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="teachers.html">Our Teachers</a></li>
+          <li><a href="success.html">Success Stories</a></li>
+          <li><a href="expansion.html">International Expansion</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Courses</h4>
+        <ul>
+          <li><a href="courses.html">Beginner English</a></li>
+          <li><a href="courses.html">Business English</a></li>
+          <li><a href="courses.html">IELTS Preparation</a></li>
+          <li><a href="courses.html">TOEFL Preparation</a></li>
+          <li><a href="courses.html">Kids English</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul class="footer-contact">
+          <li><i class="fa-solid fa-location-dot"></i> Cairo, Egypt (Head Office)</li>
+          <li><i class="fa-solid fa-envelope"></i> hello@linguabridgeacademy.com</li>
+          <li><i class="fa-solid fa-phone"></i> +20 100 123 4567</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span class="current-year">2026</span> LinguaBridge Academy. All rights reserved.</span>
+      <span>Designed with <i class="fa-solid fa-heart" style="color:#F9A826;"></i> for global learners.</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+<a href="https://wa.me/201001234567" class="whatsapp-float" aria-label="Chat on WhatsApp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

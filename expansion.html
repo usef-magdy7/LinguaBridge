@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>International Expansion | LinguaBridge Academy</title>
+<meta name="description" content="Explore LinguaBridge Academy's international expansion plans — head office in Egypt and our first international branch in Guinea-Bissau.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  /* Page-specific: info panel that updates on pin interaction */
+  .map-info-panel{ background:var(--color-white); border-radius:var(--radius-md); padding:26px 30px; box-shadow:var(--shadow-sm); border:1px solid var(--color-border); margin-top:24px; display:flex; gap:18px; align-items:flex-start; transition:box-shadow var(--dur-fast) var(--ease); }
+  .map-info-panel .flag{ font-size:2.4rem; line-height:1; }
+  .map-info-panel h3{ margin-bottom:6px; }
+  .map-info-panel p{ color:var(--color-text-soft); font-size:.94rem; margin:0; }
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+<div class="loader" aria-hidden="true">
+  <div class="loader-mark">LB</div>
+  <div class="loader-bar"><span></span></div>
+  <p>Loading LinguaBridge Academy…</p>
+</div>
+<div id="scroll-progress"></div>
+
+<header class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand"><span class="brand-mark">LB</span> LinguaBridge</a>
+    <nav class="nav-menu" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="courses.html">Courses</a>
+      <a href="teachers.html">Teachers</a>
+      <a href="success.html">Success Stories</a>
+      <a href="future-languages.html">Future Languages</a>
+      <a href="expansion.html" aria-current="page">Expansion</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn dark-toggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
+      <a href="contact.html" class="btn btn-primary btn-sm">Enroll Now</a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> <span>Expansion</span></div>
+      <h1>Building A <span class="bridge-underline">Global Bridge</span></h1>
+      <p>Our head office is in Egypt. Our first international branch is on its way to Guinea-Bissau. Explore the map below.</p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="map-heading">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow"><i class="fa-solid fa-map-location-dot"></i> Interactive Map</span>
+        <h2 id="map-heading">Where LinguaBridge Stands Today</h2>
+        <p>Click or tap a pin to learn more about each location.</p>
+      </div>
+
+      <div class="map-wrap reveal">
+        <svg viewBox="0 0 1000 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="World map highlighting Egypt as head office and Guinea-Bissau as future branch">
+          <!-- Stylized abstract world dot-grid background -->
+          <defs>
+            <pattern id="dots" width="18" height="18" patternUnits="userSpaceOnUse">
+              <circle cx="2" cy="2" r="1.6" fill="#0F4C81" opacity="0.10"/>
+            </pattern>
+          </defs>
+          <rect width="1000" height="460" fill="url(#dots)"/>
+
+          <!-- Simplified continents as soft blobs (stylized, not geographically precise) -->
+          <g fill="#0F4C81" opacity="0.09">
+            <path d="M120,120 Q220,80 320,120 T480,140 Q460,220 380,260 Q300,300 220,270 Q140,240 120,180 Z"/>
+            <path d="M430,160 Q520,140 560,190 Q590,240 560,300 Q520,360 460,370 Q400,380 380,320 Q370,240 430,160 Z"/>
+            <path d="M620,110 Q760,90 860,140 Q920,170 900,220 Q800,260 700,230 Q630,200 620,110 Z"/>
+          </g>
+
+          <!-- Bridge Arc connecting Egypt (HQ) to Guinea-Bissau (future branch): signature motif -->
+          <path d="M540,215 C460,120 320,120 260,235" fill="none" stroke="#F9A826" stroke-width="3" stroke-dasharray="2 10" stroke-linecap="round"/>
+
+          <!-- Egypt Pin (Head Office) -->
+          <g class="map-pin" tabindex="0" role="button" aria-label="Egypt: Head Office"
+             onclick="showLocation('egypt')" onkeypress="if(event.key==='Enter')showLocation('egypt')">
+            <circle class="pulse" cx="540" cy="215" r="10" fill="#0F4C81" opacity="0.5"/>
+            <circle cx="540" cy="215" r="9" fill="#0F4C81" stroke="#fff" stroke-width="3"/>
+            <text x="540" y="198" text-anchor="middle" font-family="Poppins, sans-serif" font-size="15" font-weight="700" fill="#0F4C81">Egypt (HQ)</text>
+          </g>
+
+          <!-- Guinea-Bissau Pin (Future Branch) -->
+          <g class="map-pin" tabindex="0" role="button" aria-label="Guinea-Bissau: Future Branch"
+             onclick="showLocation('gb')" onkeypress="if(event.key==='Enter')showLocation('gb')">
+            <circle class="pulse" cx="260" cy="235" r="10" fill="#F9A826" opacity="0.5"/>
+            <circle cx="260" cy="235" r="9" fill="#F9A826" stroke="#fff" stroke-width="3"/>
+            <text x="260" y="260" text-anchor="middle" font-family="Poppins, sans-serif" font-size="15" font-weight="700" fill="#DB8B0F">Guinea-Bissau</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="map-legend reveal">
+        <div><span class="legend-dot" style="background:#0F4C81;"></span> Head Office (Active)</div>
+        <div><span class="legend-dot" style="background:#F9A826;"></span> Future Branch (Planned)</div>
+      </div>
+
+      <div class="map-info-panel reveal" id="map-info">
+        <span class="flag">🇪🇬</span>
+        <div>
+          <h3>Cairo, Egypt — Head Office</h3>
+          <p>The founding home of LinguaBridge Academy, housing our curriculum team, teacher training programs, and academic leadership.</p>
+        </div>
+      </div>
+
+      <div class="expansion-cards reveal">
+        <div class="branch-card">
+          <div class="branch-flag">🇪🇬</div>
+          <span class="branch-tag">Active</span>
+          <h3>Cairo, Egypt</h3>
+          <p>Fully operational head office serving thousands of students online and in-person since our founding.</p>
+        </div>
+        <div class="branch-card future">
+          <div class="branch-flag">🇬🇼</div>
+          <span class="branch-tag">Planned — First International Branch</span>
+          <h3>Guinea-Bissau</h3>
+          <p>Our next milestone: bringing LinguaBridge's classrooms, teacher network, and curriculum to West Africa in person.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPANSION TIMELINE -->
+  <section class="section section-alt" aria-labelledby="exp-timeline-heading">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow"><i class="fa-solid fa-flag-checkered"></i> Milestones</span>
+        <h2 id="exp-timeline-heading">Our Expansion Timeline</h2>
+      </div>
+      <div class="expansion-timeline reveal">
+        <div class="et-step">
+          <div class="et-year">2023</div>
+          <h4>Founded in Cairo</h4>
+          <p>LinguaBridge Academy opens its first classroom in Egypt.</p>
+        </div>
+        <div class="et-step">
+          <div class="et-year">2025</div>
+          <h4>Online Growth</h4>
+          <p>Digital classrooms bring students from 30+ countries.</p>
+        </div>
+        <div class="et-step">
+          <div class="et-year">2026</div>
+          <h4>Head Office Established</h4>
+          <p>Cairo becomes our permanent academic head office.</p>
+        </div>
+        <div class="et-step milestone-future">
+          <div class="et-year">2027</div>
+          <h4>Guinea-Bissau Branch</h4>
+          <p>Our first international, in-person branch opens its doors.</p>
+        </div>
+        <div class="et-step milestone-future">
+          <div class="et-year">2028+</div>
+          <h4>Further Branches</h4>
+          <p>Additional regional campuses planned as new languages launch.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand" style="color:#fff;"><span class="brand-mark">LB</span> LinguaBridge</a>
+        <p>A modern language academy teaching English today, and building toward a multilingual, multi-country future — starting with our first international branch in Guinea-Bissau.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="teachers.html">Our Teachers</a></li>
+          <li><a href="success.html">Success Stories</a></li>
+          <li><a href="expansion.html">International Expansion</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Courses</h4>
+        <ul>
+          <li><a href="courses.html">Beginner English</a></li>
+          <li><a href="courses.html">Business English</a></li>
+          <li><a href="courses.html">IELTS Preparation</a></li>
+          <li><a href="courses.html">TOEFL Preparation</a></li>
+          <li><a href="courses.html">Kids English</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul class="footer-contact">
+          <li><i class="fa-solid fa-location-dot"></i> Cairo, Egypt (Head Office)</li>
+          <li><i class="fa-solid fa-envelope"></i> hello@linguabridgeacademy.com</li>
+          <li><i class="fa-solid fa-phone"></i> +20 100 123 4567</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span class="current-year">2026</span> LinguaBridge Academy. All rights reserved.</span>
+      <span>Designed with <i class="fa-solid fa-heart" style="color:#F9A826;"></i> for global learners.</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+<a href="https://wa.me/201001234567" class="whatsapp-float" aria-label="Chat on WhatsApp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+
+<script src="assets/js/main.js"></script>
+<script>
+  // Page-specific: update info panel when a map pin is selected
+  const locations = {
+    egypt: { flag: '🇪🇬', title: 'Cairo, Egypt — Head Office', text: 'The founding home of LinguaBridge Academy, housing our curriculum team, teacher training programs, and academic leadership.' },
+    gb: { flag: '🇬🇼', title: 'Guinea-Bissau — Future Branch', text: 'Our first international branch, planned to bring in-person LinguaBridge classrooms to West Africa and open the door to further regional growth.' }
+  };
+  function showLocation(key) {
+    const data = locations[key];
+    const panel = document.getElementById('map-info');
+    panel.querySelector('.flag').textContent = data.flag;
+    panel.querySelector('h3').textContent = data.title;
+    panel.querySelector('p').textContent = data.text;
+  }
+</script>
+</body>
+</html>
